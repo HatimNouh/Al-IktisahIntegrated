@@ -113,8 +113,8 @@ const BUSINESS_DETAILS = {
     ar: 'سويبي للخدمات المنزلية',
   },
   email: '',
-  phoneDisplay: '+218 92 324 9449',
-  phoneDigits: '218923249449',
+  phoneDisplay: '+218 91-8711214',
+  phoneDigits: '218918711214',
   facebookUrl: 'https://www.facebook.com/share/1Dy6fH8ng1/',
   coFounder: {
     en: 'Ahmed Nouh',
