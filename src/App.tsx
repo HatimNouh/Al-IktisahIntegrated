@@ -814,15 +814,6 @@ const openUrl = (url: string) => {
 
 function App() {
   const [locale, setLocale] = useState<Locale>(() => {
-    if (typeof window === 'undefined') {
-      return 'ar';
-    }
-
-    const savedLocale = window.localStorage.getItem('cleaning-locale');
-    if (savedLocale === 'en' || savedLocale === 'ar') {
-      return savedLocale;
-    }
-
     return 'ar';
   });
   const [estimateForm, setEstimateForm] = useState<EstimateFormState>(initialEstimateState);
@@ -841,7 +832,6 @@ function App() {
     document.title = `${translate(BUSINESS_DETAILS.companyName, locale)} | ${
       locale === 'ar' ? 'خدمات تنظيف احترافية' : 'Professional Cleaning Services'
     }`;
-    window.localStorage.setItem('cleaning-locale', locale);
   }, [direction, locale]);
 
   const whatsappEstimateLink = useMemo(() => {
