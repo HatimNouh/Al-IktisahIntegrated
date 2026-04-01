@@ -1,0 +1,32 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="640" rx="40" fill="#F6F7FA"/>
+  <g transform="translate(92 48)">
+    <path d="M28 170C28 144 49 123 75 123H147L208 58C219 47 237 47 248 58L455 265C466 276 466 294 455 305C444 316 426 316 415 305L398 288V427C398 451 379 470 355 470H287V362C287 345 273 331 256 331H200C183 331 169 345 169 362V470H101C77 470 58 451 58 427V252C40 244 28 228 28 209V170Z" fill="#FFFFFF"/>
+    <path d="M44 170C44 153 58 139 75 139H154L220 73C227 66 239 66 246 73L256 83V232H44V170Z" fill="#FFA21F"/>
+    <path d="M276 83L416 223V232H276V83Z" fill="#4FB8F2"/>
+    <path d="M44 252H256V470H101C69 470 44 445 44 413V252Z" fill="#7CCB3D"/>
+    <path d="M276 252H416V413C416 445 391 470 359 470H276V252Z" fill="#C33584"/>
+
+    <g fill="#FFFFFF">
+      <path d="M93 190L173 126C178 122 185 122 190 126L209 145C214 150 214 157 209 162L129 227C124 232 116 232 111 227L92 208C87 203 87 195 93 190Z"/>
+      <rect x="95" y="198" width="130" height="34" rx="10" transform="rotate(-45 95 198)"/>
+
+      <path d="M324 131C330 125 340 125 346 131L371 156L389 138C396 131 408 131 415 138L424 147C431 154 431 166 424 173L406 191L430 215C436 221 436 231 430 237L413 254C407 260 397 260 391 254L367 230L346 251C339 258 328 258 321 251L312 242C305 235 305 223 312 216L333 195L308 170C302 164 302 154 308 148L324 131Z"/>
+
+      <path d="M134 345C140 335 155 335 161 345L214 443C220 454 212 468 200 468H94C82 468 74 454 80 443L134 345Z"/>
+      <rect x="111" y="340" width="70" height="34" rx="12" transform="rotate(30 111 340)"/>
+      <rect x="147" y="304" width="22" height="64" rx="8" transform="rotate(30 147 304)"/>
+
+      <rect x="306" y="316" width="42" height="112" rx="16"/>
+      <rect x="276" y="316" width="102" height="32" rx="16"/>
+      <path d="M309 430H345V470H309V430Z"/>
+    </g>
+  </g>
+
+  <text x="320" y="566" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="800" letter-spacing="4" fill="#27A23E">
+    SWEEPY
+  </text>
+  <text x="320" y="622" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="800" letter-spacing="3" fill="#C33584">
+    HOME SERVICES
+  </text>
+</svg>

@@ -105,21 +105,29 @@ interface EstimateResult {
 
 const BUSINESS_DETAILS = {
   companyName: {
-    en: 'Your Company Name',
-    ar: 'اسم الشركة هنا',
+    en: 'Al-Iktisah Integrated Home Services Company',
+    ar: 'شركة الاكتساح للخدمات المنزلية المتكاملة',
   },
-  email: 'info@company.com',
+  brandName: {
+    en: 'Sweepy Home Services',
+    ar: 'سويبي للخدمات المنزلية',
+  },
+  email: '',
   phoneDisplay: '+218 92 324 9449',
   phoneDigits: '218923249449',
+  facebookUrl: 'https://www.facebook.com/share/1Dy6fH8ng1/',
   coFounder: {
     en: 'Ahmed Nouh',
     ar: 'أحمد نوح',
   },
   serviceArea: {
-    en: 'Libya - exact cities can be updated later',
-    ar: 'ليبيا - يمكن تحديث المدن لاحقًا',
+    en: 'Tripoli, Libya',
+    ar: 'طرابلس، ليبيا',
   },
 } as const;
+
+const BRAND_LOGO_PATH = `${import.meta.env.BASE_URL}sweepy-logo.svg`;
+const ABOUT_VIDEO_PATH = `${import.meta.env.BASE_URL}sweepy-about-video.mp4`;
 
 const navigationItems = [
   { id: 'home', label: { en: 'Home', ar: 'الرئيسية' } },
@@ -463,9 +471,9 @@ const testimonials: Testimonial[] = [
 ];
 const pageCopy = {
   en: {
-    brandSubtitle: 'Professional cleaning services',
+    brandSubtitle: 'Integrated home services in Tripoli',
     topbarWhatsapp: 'WhatsApp now',
-    heroBadge: 'Homes, offices, and events across Libya',
+    heroBadge: 'Integrated home services in Tripoli',
     heroTitle: 'Modern cleaning services built for quick booking and clear pricing.',
     heroDescription:
       'We provide professional cleaning services for homes, offices, and events. Our trained cleaning team arrives fully prepared with the right tools and supplies, making booking simple, reliable, and practical.',
@@ -500,9 +508,9 @@ const pageCopy = {
     feedbackDescription:
       'Use approved testimonials later. For now, the section is designed and ready for quick updates.',
     aboutBadge: 'About',
-    aboutTitle: 'Built to serve Libyan customers in Arabic and English.',
+    aboutTitle: 'A trusted Tripoli-based identity for integrated home services.',
     aboutDescription:
-      'Business details remain easy to edit later, while the app already feels like a premium service experience instead of a basic brochure site.',
+      'The About & Contact page now shows the company identity, logo, service details, Facebook presence, and company video in one place.',
     aboutMissionTitle: 'Mission and values',
     aboutMissionText:
       'Deliver reliable cleaning services with a prepared team, straightforward communication, and booking that works well on mobile.',
@@ -545,26 +553,26 @@ const pageCopy = {
     requestReference: 'Request reference',
     pendingValue: 'To be confirmed',
     contactBadge: 'Contact',
-    contactTitle: 'Keep WhatsApp, phone, and placeholders easy to update.',
+    contactTitle: 'WhatsApp, phone, Facebook, and location stay clear and easy to reach.',
     contactDescription:
-      'The business can add the final company name, email, service areas, and social links later without redesigning the app.',
+      'Customers can contact the company directly, view the service area, and open the official Facebook page from the same page.',
     contactFormTitle: 'Quick contact form',
     contactFormDescription: 'This sends a short prefilled message to WhatsApp.',
     contactMessageLabel: 'Message',
     contactMessagePlaceholder: 'Tell us what you need cleaned or ask for a callback',
     sendMessage: 'Send message on WhatsApp',
-    emailPlaceholderNote: 'Email placeholder - update later.',
-    serviceAreaPlaceholderNote: 'Service area placeholder - update later.',
-    socialTitle: 'Social links placeholder',
-    socialDescription: 'Add Instagram, Facebook, TikTok, or other links here later.',
+    emailPlaceholderNote: 'Email can be added later if needed.',
+    serviceAreaPlaceholderNote: 'Serving Tripoli and nearby requests based on availability.',
+    socialTitle: 'Official Facebook page',
+    socialDescription: 'Open the company Facebook page for updates, media, and direct contact.',
     footerNote:
-      'Company name, email, service areas, and starting prices are all easy to edit later from the frontend content constants.',
+      'Al-Iktisah Integrated Home Services Company presents its Tripoli identity with direct contact and media on one page.',
     footerWhatsapp: 'Send photos for faster confirmation',
   },
   ar: {
-    brandSubtitle: 'خدمات تنظيف احترافية',
+    brandSubtitle: 'خدمات منزلية متكاملة في طرابلس',
     topbarWhatsapp: 'واتساب الآن',
-    heroBadge: 'منازل ومكاتب ومناسبات داخل ليبيا',
+    heroBadge: 'خدمات منزلية متكاملة في طرابلس',
     heroTitle: 'خدمات تنظيف عصرية بحجز سريع وتسعير واضح.',
     heroDescription:
       'نقدم خدمات تنظيف احترافية للمنازل والمكاتب والمناسبات. يصل فريق التنظيف لدينا مجهزًا بالكامل بالأدوات ومواد التنظيف المناسبة، مما يجعل الحجز سهلًا وموثوقًا وعمليًا.',
@@ -599,9 +607,9 @@ const pageCopy = {
     feedbackDescription:
       'يمكن إضافة التقييمات المعتمدة لاحقًا، أما الآن فالقسم جاهز ومصمم للتحديث السريع.',
     aboutBadge: 'من نحن',
-    aboutTitle: 'تجربة ثنائية اللغة مناسبة للعملاء في ليبيا.',
+    aboutTitle: 'هوية موثوقة لخدمات منزلية متكاملة انطلاقًا من طرابلس.',
     aboutDescription:
-      'تبقى تفاصيل النشاط سهلة التعديل لاحقًا، بينما يشعر المستخدم منذ الآن بأنه يتعامل مع خدمة حقيقية وليست صفحة تعريفية بسيطة.',
+      'تعرض صفحة من نحن والتواصل هوية الشركة والشعار وتفاصيل النشاط وصفحة فيسبوك والفيديو التعريفي في مكان واحد.',
     aboutMissionTitle: 'الرسالة والقيم',
     aboutMissionText:
       'تقديم خدمة تنظيف موثوقة عبر فريق مجهز، وتواصل واضح، وحجز يعمل بشكل ممتاز على الجوال.',
@@ -644,20 +652,20 @@ const pageCopy = {
     requestReference: 'رقم الطلب',
     pendingValue: 'يتم التأكيد لاحقًا',
     contactBadge: 'التواصل',
-    contactTitle: 'اجعل واتساب والهاتف والبيانات القابلة للتعديل واضحة دائمًا.',
+    contactTitle: 'واتساب والهاتف وفيسبوك والموقع كلها واضحة وسهلة الوصول.',
     contactDescription:
-      'يمكن إضافة الاسم النهائي للشركة والبريد الإلكتروني ومناطق الخدمة وروابط التواصل الاجتماعي لاحقًا دون إعادة تصميم الواجهة.',
+      'يمكن للعميل الوصول مباشرة إلى الشركة ومعرفة نطاق الخدمة وفتح صفحة فيسبوك الرسمية من نفس الصفحة.',
     contactFormTitle: 'نموذج تواصل سريع',
     contactFormDescription: 'يرسل هذا النموذج رسالة قصيرة جاهزة إلى واتساب.',
     contactMessageLabel: 'الرسالة',
     contactMessagePlaceholder: 'أخبرنا بما تريد تنظيفه أو اطلب مكالمة',
     sendMessage: 'أرسل الرسالة عبر واتساب',
-    emailPlaceholderNote: 'البريد الإلكتروني مؤقت - يمكن تحديثه لاحقًا.',
-    serviceAreaPlaceholderNote: 'مناطق الخدمة مؤقتة - يمكن تحديثها لاحقًا.',
-    socialTitle: 'مكان مخصص لروابط التواصل',
-    socialDescription: 'أضف روابط إنستغرام أو فيسبوك أو تيك توك أو غيرها لاحقًا.',
+    emailPlaceholderNote: 'يمكن إضافة البريد الإلكتروني لاحقًا إذا لزم الأمر.',
+    serviceAreaPlaceholderNote: 'الخدمة داخل طرابلس والطلبات القريبة حسب التوفر.',
+    socialTitle: 'صفحة فيسبوك الرسمية',
+    socialDescription: 'افتح صفحة الشركة على فيسبوك لمتابعة التحديثات والوسائط والتواصل المباشر.',
     footerNote:
-      'اسم الشركة والبريد الإلكتروني ومناطق الخدمة والأسعار الابتدائية كلها قابلة للتعديل لاحقًا من ثوابت المحتوى في الواجهة.',
+      'تعرض شركة الاكتساح للخدمات المنزلية المتكاملة هويتها في طرابلس مع وسائل تواصل ووسائط مباشرة في صفحة واحدة.',
     footerWhatsapp: 'أرسل الصور للحصول على تأكيد أسرع',
   },
 } as const;
@@ -897,7 +905,7 @@ function App() {
         <header className="topbar card">
           <button type="button" className="brand-lockup brand-button" onClick={() => goToSection('home')}>
             <span className="brand-mark">
-              <Sparkles size={20} />
+              <img src={BRAND_LOGO_PATH} alt={translate(BUSINESS_DETAILS.brandName, locale)} />
             </span>
             <div>
               <p className="brand-title">{translate(BUSINESS_DETAILS.companyName, locale)}</p>
@@ -1158,15 +1166,27 @@ function App() {
                       <strong>{translate(BUSINESS_DETAILS.companyName, locale)}</strong>
                     </div>
                     <div className="detail-row">
+                      <span>{locale === 'ar' ? 'الاسم التجاري' : 'Brand name'}</span>
+                      <strong>{translate(BUSINESS_DETAILS.brandName, locale)}</strong>
+                    </div>
+                    <div className="detail-row">
                       <span>{locale === 'ar' ? 'الهاتف / واتساب' : 'Phone / WhatsApp'}</span>
                       <a href={`tel:${BUSINESS_DETAILS.phoneDigits}`}>{BUSINESS_DETAILS.phoneDisplay}</a>
                     </div>
+                    {BUSINESS_DETAILS.email ? (
+                      <div className="detail-row">
+                        <span>{locale === 'ar' ? 'البريد الإلكتروني' : 'Email'}</span>
+                        <a href={`mailto:${BUSINESS_DETAILS.email}`}>{BUSINESS_DETAILS.email}</a>
+                      </div>
+                    ) : null}
                     <div className="detail-row">
-                      <span>{locale === 'ar' ? 'البريد الإلكتروني' : 'Email'}</span>
-                      <a href={`mailto:${BUSINESS_DETAILS.email}`}>{BUSINESS_DETAILS.email}</a>
+                      <span>{locale === 'ar' ? 'فيسبوك' : 'Facebook'}</span>
+                      <a href={BUSINESS_DETAILS.facebookUrl} target="_blank" rel="noreferrer">
+                        {locale === 'ar' ? 'افتح الصفحة الرسمية' : 'Open official page'}
+                      </a>
                     </div>
                     <div className="detail-row muted-detail">
-                      <span>{locale === 'ar' ? 'ملاحظة البريد' : 'Email note'}</span>
+                      <span>{locale === 'ar' ? 'ملاحظة التواصل' : 'Contact note'}</span>
                       <strong>{t.emailPlaceholderNote}</strong>
                     </div>
                     <div className="detail-row muted-detail">
@@ -1179,6 +1199,37 @@ function App() {
                     </div>
                   </article>
                 </div>
+
+                <div className="about-media-grid">
+                  <article className="brand-showcase card">
+                    <img className="brand-showcase-image" src={BRAND_LOGO_PATH} alt={translate(BUSINESS_DETAILS.brandName, locale)} />
+                    <div className="brand-showcase-copy">
+                      <span className="mini-badge">{locale === 'ar' ? 'هوية الشركة' : 'Brand identity'}</span>
+                      <h3>{translate(BUSINESS_DETAILS.brandName, locale)}</h3>
+                      <p>{translate(BUSINESS_DETAILS.companyName, locale)}</p>
+                      <p>{translate(BUSINESS_DETAILS.serviceArea, locale)}</p>
+                      <a className="secondary-button" href={BUSINESS_DETAILS.facebookUrl} target="_blank" rel="noreferrer">
+                        <Globe size={18} />
+                        {locale === 'ar' ? 'افتح صفحة فيسبوك' : 'Open Facebook page'}
+                      </a>
+                    </div>
+                  </article>
+
+                  <article className="brand-video-card card">
+                    <div className="brand-video-copy">
+                      <span className="mini-badge">{locale === 'ar' ? 'فيديو الشركة' : 'Company video'}</span>
+                      <h3>{locale === 'ar' ? 'تعرف على الشركة من خلال الفيديو' : 'See the company through video'}</h3>
+                      <p>
+                        {locale === 'ar'
+                          ? 'أضفنا الفيديو المرسل داخل صفحة من نحن والتواصل ليظهر النشاط بشكل أوضح ومباشر.'
+                          : 'The provided video is embedded directly into About & Contact so visitors can see the business visually.'}
+                      </p>
+                    </div>
+                    <video className="about-video-player" controls preload="metadata" playsInline>
+                      <source src={ABOUT_VIDEO_PATH} type="video/mp4" />
+                    </video>
+                  </article>
+                </div>
               </div>
 
               <div className="content-section">
@@ -1189,15 +1240,24 @@ function App() {
                       <span>{locale === 'ar' ? 'الهاتف / واتساب' : 'Phone / WhatsApp'}</span>
                       <a href={`tel:${BUSINESS_DETAILS.phoneDigits}`}>{BUSINESS_DETAILS.phoneDisplay}</a>
                     </article>
-                    <article className="contact-card card">
-                      <span>{locale === 'ar' ? 'البريد الإلكتروني' : 'Email'}</span>
-                      <a href={`mailto:${BUSINESS_DETAILS.email}`}>{BUSINESS_DETAILS.email}</a>
-                      <small>{t.emailPlaceholderNote}</small>
-                    </article>
+                    {BUSINESS_DETAILS.email ? (
+                      <article className="contact-card card">
+                        <span>{locale === 'ar' ? 'البريد الإلكتروني' : 'Email'}</span>
+                        <a href={`mailto:${BUSINESS_DETAILS.email}`}>{BUSINESS_DETAILS.email}</a>
+                        <small>{t.emailPlaceholderNote}</small>
+                      </article>
+                    ) : null}
                     <article className="contact-card card">
                       <span>{locale === 'ar' ? 'مناطق الخدمة' : 'Service area'}</span>
                       <strong>{translate(BUSINESS_DETAILS.serviceArea, locale)}</strong>
                       <small>{t.serviceAreaPlaceholderNote}</small>
+                    </article>
+                    <article className="contact-card card">
+                      <span>{locale === 'ar' ? 'فيسبوك' : 'Facebook'}</span>
+                      <a href={BUSINESS_DETAILS.facebookUrl} target="_blank" rel="noreferrer">
+                        {locale === 'ar' ? 'افتح الصفحة الرسمية' : 'Open official page'}
+                      </a>
+                      <small>{t.socialDescription}</small>
                     </article>
                     <article className="contact-card card">
                       <span>{locale === 'ar' ? 'الشريك المؤسس' : 'Co-founder'}</span>
@@ -1250,9 +1310,11 @@ function App() {
                       <h4>{t.socialTitle}</h4>
                       <p>{t.socialDescription}</p>
                       <div className="social-tags">
-                        <span>Instagram</span>
-                        <span>Facebook</span>
-                        <span>TikTok</span>
+                        <a href={BUSINESS_DETAILS.facebookUrl} target="_blank" rel="noreferrer">
+                          Facebook
+                        </a>
+                        <span>{translate(BUSINESS_DETAILS.serviceArea, locale)}</span>
+                        <span>{translate(BUSINESS_DETAILS.brandName, locale)}</span>
                       </div>
                     </div>
                   </form>
