@@ -126,8 +126,8 @@ img {
 }
 
 .brand-mark {
-  width: 68px;
-  height: 68px;
+  width: 74px;
+  height: 74px;
   display: grid;
   place-items: center;
   padding: 4px;
@@ -146,16 +146,49 @@ img {
   border-radius: 16px;
 }
 
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 420px;
+}
+
+.brand-label {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(22, 102, 211, 0.12), rgba(47, 143, 255, 0.08));
+  color: var(--brand-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
 .brand-title {
   margin: 0;
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: clamp(1.1rem, 1.35vw, 1.48rem);
+  line-height: 1.18;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 
 .brand-subtitle {
-  margin: 4px 0 0;
+  margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
+  line-height: 1.5;
+  text-wrap: balance;
+}
+
+html[dir='rtl'] .brand-copy {
+  align-items: flex-start;
+}
+
+html[dir='rtl'] .brand-title {
+  font-size: clamp(1.08rem, 1.5vw, 1.42rem);
 }
 
 .topnav {
@@ -973,6 +1006,29 @@ button:disabled {
 
   .hero-copy h1 {
     max-width: none;
+  }
+
+  .brand-lockup {
+    align-items: flex-start;
+  }
+
+  .brand-mark {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+  }
+
+  .brand-copy {
+    max-width: none;
+  }
+
+  .brand-title {
+    font-size: 1rem;
+  }
+
+  .brand-label {
+    font-size: 0.72rem;
+    padding: 5px 10px;
   }
 
   .service-footer,

@@ -907,7 +907,8 @@ function App() {
             <span className="brand-mark">
               <img src={BRAND_LOGO_PATH} alt={translate(BUSINESS_DETAILS.brandName, locale)} />
             </span>
-            <div>
+            <div className="brand-copy">
+              <span className="brand-label">{translate(BUSINESS_DETAILS.brandName, locale)}</span>
               <p className="brand-title">{translate(BUSINESS_DETAILS.companyName, locale)}</p>
               <p className="brand-subtitle">{t.brandSubtitle}</p>
             </div>
