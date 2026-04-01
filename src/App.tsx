@@ -815,7 +815,7 @@ const openUrl = (url: string) => {
 function App() {
   const [locale, setLocale] = useState<Locale>(() => {
     if (typeof window === 'undefined') {
-      return 'en';
+      return 'ar';
     }
 
     const savedLocale = window.localStorage.getItem('cleaning-locale');
@@ -823,7 +823,7 @@ function App() {
       return savedLocale;
     }
 
-    return window.navigator.language.toLowerCase().startsWith('ar') ? 'ar' : 'en';
+    return 'ar';
   });
   const [estimateForm, setEstimateForm] = useState<EstimateFormState>(initialEstimateState);
   const [contactForm, setContactForm] = useState<ContactFormState>(initialContactState);
@@ -931,11 +931,11 @@ function App() {
 
           <div className="topbar-actions">
             <div className="language-switch" aria-label={locale === 'ar' ? 'تبديل اللغة' : 'Switch language'}>
-              <button type="button" className={locale === 'en' ? 'active' : ''} onClick={() => setLocale('en')}>
-                EN
-              </button>
               <button type="button" className={locale === 'ar' ? 'active' : ''} onClick={() => setLocale('ar')}>
                 AR
+              </button>
+              <button type="button" className={locale === 'en' ? 'active' : ''} onClick={() => setLocale('en')}>
+                EN
               </button>
             </div>
             <a className="inline-whatsapp" href={whatsappEstimateLink} target="_blank" rel="noreferrer">
