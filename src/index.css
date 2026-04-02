@@ -464,9 +464,9 @@ html[dir='rtl'] .brand-title {
 
 .hero-section {
   display: grid;
-  grid-template-columns: minmax(0, 1.24fr) minmax(250px, 0.72fr);
-  gap: 16px;
-  align-items: stretch;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: 20px;
+  align-items: start;
 }
 
 .hero-copy,
@@ -482,9 +482,11 @@ html[dir='rtl'] .brand-title {
 .hero-copy {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-self: stretch;
   min-height: 100%;
-  padding: 24px;
+  max-width: 680px;
+  padding: 24px 24px 20px;
 }
 
 .section-badge,
@@ -519,6 +521,7 @@ html[dir='rtl'] .brand-title {
 .hero-copy h1 {
   max-width: 12ch;
   font-size: clamp(2.25rem, 4.2vw, 3.75rem);
+  text-wrap: balance;
 }
 
 .hero-description,
@@ -538,6 +541,16 @@ html[dir='rtl'] .brand-title {
   line-height: 1.7;
 }
 
+.hero-description,
+.hero-panel-header p,
+.hero-photo-card p {
+  margin: 0;
+}
+
+.hero-description {
+  max-width: 58ch;
+}
+
 .hero-actions,
 .form-actions,
 .booking-ready-actions {
@@ -547,7 +560,8 @@ html[dir='rtl'] .brand-title {
 }
 
 .hero-actions {
-  margin: 22px 0 18px;
+  margin: 20px 0 16px;
+  align-items: center;
 }
 
 .hero-pills {
@@ -580,10 +594,17 @@ html[dir='rtl'] .brand-title {
   padding: 24px;
   overflow: hidden;
   isolation: isolate;
+  align-self: stretch;
+}
+
+.hero-panel-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .hero-panel-header h2 {
-  margin: 14px 0 10px;
+  margin: 0;
   font-size: clamp(1.35rem, 2vw, 1.8rem);
 }
 
@@ -769,6 +790,7 @@ html[dir='rtl'] .brand-title {
 .price-preview-list {
   display: grid;
   gap: 10px;
+  align-content: start;
 }
 
 .price-preview-item {
@@ -779,6 +801,12 @@ html[dir='rtl'] .brand-title {
   padding: 12px;
   border-radius: var(--radius-md);
   background: rgba(15, 23, 42, 0.03);
+}
+
+.price-preview-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .price-preview-item strong,
@@ -1466,6 +1494,10 @@ button:disabled {
     padding: 22px;
   }
 
+  .hero-copy {
+    max-width: none;
+  }
+
   .hero-scene {
     height: 154px;
   }
@@ -1535,12 +1567,16 @@ button:disabled {
   .hero-actions {
     margin: 18px 0 14px;
     gap: 10px;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .hero-actions .primary-button,
   .hero-actions .secondary-button {
     padding: 10px 14px;
     font-size: 0.88rem;
+    width: 100%;
+    justify-content: center;
   }
 
   .hero-pills {
